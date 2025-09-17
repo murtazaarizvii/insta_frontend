@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './LoginPage.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +10,7 @@ const LoginPage = () => {
 
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+   const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -42,6 +43,9 @@ const LoginPage = () => {
       } else {
         setSuccess('Login successful!');
         // Optionally save token, redirect, etc.
+         setTimeout(() => {
+          navigate('/dashboard'); // ✅ redirect after login
+        }, 1000);
       }
     } catch (err) {
       setError('Network error. Please try again.');
