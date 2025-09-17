@@ -5,21 +5,20 @@ body {
   padding: 0;
 }
 
-/* Main container */
+/* Full screen wrapper */
 .login-container {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  min-height: 100vh; /* Full height */
-  justify-content: center;
-  gap: 15px;
+  justify-content: center; /* center vertical */
+  align-items: center; /* center horizontal */
   padding: 20px 0;
   box-sizing: border-box;
 }
 
 /* Login Box */
 .login-box {
-  background-color: white;
+  background-color: #fff;
   border: 1px solid #dbdbdb;
   padding: 40px 30px;
   width: 350px;
@@ -31,26 +30,38 @@ body {
 }
 
 .insta-logo {
-  font-family: 'Billabong', cursive;
+  font-family: "Billabong", cursive;
   font-size: 42px;
   margin-bottom: 25px;
+  color: #262626;
+  text-align: center;
+  display: block;
 }
 
+/* Inputs */
 .input-field {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
   border: 1px solid #dbdbdb;
-  border-radius: 5px;
+  border-radius: 6px;
   background-color: #fafafa;
   font-size: 14px;
+  box-sizing: border-box;
 }
 
+.input-field:focus {
+  outline: none;
+  border-color: #0095f6;
+  background: #fff;
+}
+
+/* Button */
 .login-button {
   width: 100%;
   padding: 10px;
   background-color: #0095f6;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 6px;
   font-weight: bold;
@@ -62,6 +73,7 @@ body {
   background-color: #007acc;
 }
 
+/* Divider */
 .divider {
   margin: 20px 0;
   font-size: 13px;
@@ -73,7 +85,7 @@ body {
 
 .divider::before,
 .divider::after {
-  content: '';
+  content: "";
   height: 1px;
   background-color: #dbdbdb;
   position: absolute;
@@ -89,9 +101,11 @@ body {
   right: 0;
 }
 
+/* FB login */
 .fb-login {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   color: #385185;
   font-weight: bold;
@@ -102,8 +116,8 @@ body {
 }
 
 .fb-icon {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
 }
 
 .forgot-password {
@@ -117,16 +131,16 @@ body {
   text-decoration: underline;
 }
 
-/* Bottom Signup Box */
+/* Bottom Box */
 .signup-box-bottom {
-  border: 1px solid #e6e6e6;
+  border: 1px solid #dbdbdb;
   background: #fff;
   text-align: center;
   padding: 18px;
   width: 350px;
   font-size: 14px;
   border-radius: 12px;
-  margin-top: auto; /* Pushes to bottom */
+  margin-top: 15px;
 }
 
 .signup-box-bottom a {
@@ -139,10 +153,14 @@ body {
   text-decoration: underline;
 }
 
-/* Mobile Responsive */
+/* Mobile fix */
 @media (max-width: 400px) {
   .login-box,
   .signup-box-bottom {
     width: 90%;
+  }
+
+  .insta-logo {
+    font-size: 36px; /* thoda chhota mobile par */
   }
 }
