@@ -5,92 +5,75 @@ body {
   padding: 0;
 }
 
-/* Full screen wrapper */
 .login-container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* center vertical */
-  align-items: center; /* center horizontal */
-  padding: 20px 0;
-  box-sizing: border-box;
-}
-
-/* Login Box */
-.login-box {
-  background-color: #fff;
-  border: 1px solid #dbdbdb;
-  padding: 40px 30px;
-  width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  min-height: 100vh;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-box {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  border-radius: 8px;
 }
 
 .insta-logo {
-  font-family: "Billabong", cursive;
+  font-family: "Cookie", cursive;
   font-size: 42px;
   margin-bottom: 25px;
-  color: #262626;
-  text-align: center;
-  display: block;
 }
 
-/* Inputs */
 .input-field {
   width: 100%;
   padding: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   border: 1px solid #dbdbdb;
-  border-radius: 6px;
-  background-color: #fafafa;
+  border-radius: 4px;
   font-size: 14px;
+  background-color: #fafafa;
   box-sizing: border-box;
 }
 
-.input-field:focus {
-  outline: none;
-  border-color: #0095f6;
-  background: #fff;
-}
-
-/* Button */
 .login-button {
   width: 100%;
   padding: 10px;
+  margin-top: 12px;
   background-color: #0095f6;
-  color: #fff;
   border: none;
   border-radius: 6px;
+  color: white;
   font-weight: bold;
-  margin-top: 12px;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .login-button:hover {
   background-color: #007acc;
 }
 
-/* Divider */
 .divider {
-  margin: 20px 0;
+  margin: 18px 0;
   font-size: 13px;
   color: #8e8e8e;
-  position: relative;
-  width: 100%;
   text-align: center;
+  position: relative;
 }
 
 .divider::before,
 .divider::after {
-  content: "";
-  height: 1px;
-  background-color: #dbdbdb;
+  content: '';
   position: absolute;
   top: 50%;
   width: 40%;
+  height: 1px;
+  background-color: #dbdbdb;
 }
 
 .divider::before {
@@ -101,18 +84,17 @@ body {
   right: 0;
 }
 
-/* FB login */
 .fb-login {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 8px;
-  color: #385185;
-  font-weight: bold;
   background: none;
   border: none;
-  cursor: pointer;
+  font-weight: bold;
+  color: #385185;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 .fb-icon {
@@ -121,46 +103,47 @@ body {
 }
 
 .forgot-password {
-  margin-top: 12px;
+  display: block;
+  margin-top: 15px;
   font-size: 12px;
   color: #00376b;
   text-decoration: none;
 }
 
-.forgot-password:hover {
-  text-decoration: underline;
-}
-
-/* Bottom Box */
-.signup-box-bottom {
-  border: 1px solid #dbdbdb;
+.signup-box {
   background: #fff;
+  border: 1px solid #dbdbdb;
+  padding: 20px;
   text-align: center;
-  padding: 18px;
-  width: 350px;
+  margin-top: 12px;
+  border-radius: 8px;
   font-size: 14px;
-  border-radius: 12px;
-  margin-top: 15px;
+  width: 100%;
+  max-width: 350px;
 }
 
-.signup-box-bottom a {
-  color: #0095f6;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.signup-box-bottom a:hover {
-  text-decoration: underline;
-}
-
-/* Mobile fix */
-@media (max-width: 400px) {
-  .login-box,
-  .signup-box-bottom {
-    width: 90%;
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .login-box {
+    padding: 20px 15px;
   }
 
   .insta-logo {
-    font-size: 36px; /* thoda chhota mobile par */
+    font-size: 36px;
+  }
+
+  .input-field {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .login-button {
+    font-size: 13px;
+    padding: 9px;
+  }
+
+  .signup-box {
+    font-size: 13px;
+    padding: 15px;
   }
 }

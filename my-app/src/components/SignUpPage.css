@@ -5,62 +5,50 @@ body {
   padding: 0;
 }
 
-/* Full screen wrapper */
 .signup-container {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* center vertical */
-  align-items: center; /* center horizontal */
-  padding: 20px 0;
-  box-sizing: border-box;
-  gap: 15px;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+  padding: 20px;
 }
 
-/* Signup Box */
 .signup-box {
-  background-color: white;
+  background-color: #fff;
   border: 1px solid #dbdbdb;
-  padding: 30px;
-  width: 350px;
+  padding: 30px 20px;
+  width: 100%;
+  max-width: 350px;
   text-align: center;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
 }
 
 .insta-logo {
-  font-family: "Billabong", cursive;
+  font-family: "Cookie", cursive;
   font-size: 42px;
   margin-bottom: 15px;
-  color: #262626;
-  text-align: center;
-  display: block;
 }
 
 .signup-text {
-  font-size: 15px;
+  font-size: 14px;
   color: #8e8e8e;
   margin-bottom: 15px;
 }
 
 .fb-login-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  background-color: #0095f6;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 10px;
   width: 100%;
+  background-color: #385185;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  color: white;
   font-weight: bold;
   cursor: pointer;
-  margin-bottom: 15px;
-}
-
-.fb-login-button:hover {
-  background-color: #007acc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
 .fb-icon {
@@ -69,22 +57,21 @@ body {
 }
 
 .divider {
-  margin: 20px 0;
+  margin: 18px 0;
   font-size: 13px;
   color: #8e8e8e;
-  position: relative;
-  width: 100%;
   text-align: center;
+  position: relative;
 }
 
 .divider::before,
 .divider::after {
-  content: "";
-  height: 1px;
-  background-color: #dbdbdb;
+  content: '';
   position: absolute;
   top: 50%;
   width: 40%;
+  height: 1px;
+  background-color: #dbdbdb;
 }
 
 .divider::before {
@@ -95,35 +82,28 @@ body {
   right: 0;
 }
 
-/* Inputs */
 .input-field {
   width: 100%;
   padding: 12px;
   margin-bottom: 8px;
   border: 1px solid #dbdbdb;
-  border-radius: 6px;
-  background-color: #fafafa;
+  border-radius: 4px;
   font-size: 14px;
+  background-color: #fafafa;
   box-sizing: border-box;
 }
 
-.input-field:focus {
-  outline: none;
-  border-color: #0095f6;
-  background: #fff;
-}
-
-/* Button */
 .signup-button {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
+  margin-top: 12px;
   background-color: #0095f6;
-  color: white;
   border: none;
   border-radius: 6px;
+  color: white;
   font-weight: bold;
-  margin-top: 12px;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .signup-button:hover {
@@ -139,7 +119,7 @@ body {
 
 .info-text a,
 .policy-text a {
-  color: #00376b;
+  color: #0095f6;
   text-decoration: none;
 }
 
@@ -148,36 +128,53 @@ body {
   text-decoration: underline;
 }
 
-/* Bottom Box */
-.login-box-bottom {
-  border: 1px solid #dbdbdb;
-  background: #fff;
-  text-align: center;
-  padding: 18px;
-  width: 350px;
-  font-size: 14px;
-  border-radius: 12px;
+.report-link {
+  font-size: 12px;
+  color: #8e8e8e;
   margin-top: 15px;
+  text-align: center;
+  max-width: 350px;
 }
 
-.login-box-bottom a {
+.report-link a {
   color: #0095f6;
-  font-weight: 600;
   text-decoration: none;
 }
 
-.login-box-bottom a:hover {
-  text-decoration: underline;
+.login-box-bottom {
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  padding: 20px;
+  text-align: center;
+  margin-top: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 350px;
 }
 
-/* Mobile fix */
-@media (max-width: 400px) {
-  .signup-box,
-  .login-box-bottom {
-    width: 90%;
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .signup-box {
+    padding: 20px 15px;
   }
 
   .insta-logo {
     font-size: 36px;
+  }
+
+  .input-field {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .signup-button {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .login-box-bottom {
+    font-size: 13px;
+    padding: 15px;
   }
 }
